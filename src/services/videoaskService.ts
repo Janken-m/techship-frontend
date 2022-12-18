@@ -8,6 +8,7 @@ export const getAccessToken = async (code: string) => {
   let parameters = new URLSearchParams(code);
   const Code = parameters.get("home");
   localStorage.setItem("access_token", `${Code}`);
+  window.location.href = "/dashboard";
 };
 
 export const RemoveProfile = (id: string) => {
