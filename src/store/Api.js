@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const Api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://tecship-api.onrender.com/api",
+    baseUrl: "https://techship-api.onrender.com/api",
   }),
   tagTypes: ["Comments", "Category", "Form"],
   endpoints: (builder) => ({

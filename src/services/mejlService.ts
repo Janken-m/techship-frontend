@@ -8,7 +8,7 @@ interface IEmail {
 
 export async function SendEmail({ email, subject, message }: IEmail) {
   const { data } = await http.post(
-    "https://tecship-api.onrender.com/api/sendemail",
+    "https://techship-api.onrender.com/api/sendemail",
     {
       email,
       subject,
