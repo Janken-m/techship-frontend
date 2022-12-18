@@ -9,7 +9,7 @@ function Dashboard(): JSX.Element {
   useEffect(() => {
     if (!localStorage.getItem("access_token")) {
       getAccessToken(window.location.search);
-      window.location.reload();
+      window.location.href = "/";
     }
   }, [token]);
 
