@@ -1,7 +1,7 @@
 import { http } from "../services/httpService";
 
 export const handleLogin = () => {
-  window.open("http://localhost:5000/api/videoask/auth");
+  window.open("https://tecship-api.onrender.com/api/videoask/auth");
 };
 
 export const getAccessToken = async (code: string) => {
@@ -12,8 +12,11 @@ export const getAccessToken = async (code: string) => {
 
 export const RemoveProfile = (id: string) => {
   const token = localStorage.getItem("access_token");
-  const data = http.get(`http://localhost:5000/api/videoask/profile`, {
-    params: { token: token, respondentId: id },
-  });
+  const data = http.get(
+    `https://tecship-api.onrender.com/api/videoask/profile`,
+    {
+      params: { token: token, respondentId: id },
+    }
+  );
   return data;
 };

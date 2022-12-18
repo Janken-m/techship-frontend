@@ -7,10 +7,13 @@ interface IEmail {
 }
 
 export async function SendEmail({ email, subject, message }: IEmail) {
-  const { data } = await http.post("http://localhost:5000/api/sendemail", {
-    email,
-    subject,
-    message,
-  });
+  const { data } = await http.post(
+    "https://tecship-api.onrender.com/api/sendemail",
+    {
+      email,
+      subject,
+      message,
+    }
+  );
   return data;
 }
