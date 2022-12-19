@@ -30,20 +30,15 @@ function TableBody(): JSX.Element {
   contacts = contacts?.filter((c: IVideoask) => c.name !== null);
 
   useEffect(() => {
-    console.log("Kommer in i Use EFFECT");
     let filterOneApplicant = [];
     //@ts-ignore
     let allFilteredApplicants = [];
 
     if (searchQuery) {
-      console.log("Kommer in i if searchQuery", searchQuery);
-
       allFilteredApplicants = contacts?.filter((a: IVideoask) =>
         a.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
     } else if (stage) {
-      console.log("Kommer in i else if stage", stage);
-
       let NewApplicationsFromDb = comments?.filter(
         (application: IVideoask) => application.categoryId._id === stage
       );
@@ -57,7 +52,6 @@ function TableBody(): JSX.Element {
           allFilteredApplicants.concat(filterOneApplicant);
       }
     } else {
-      console.log(contacts);
       allFilteredApplicants = contacts;
     }
 
