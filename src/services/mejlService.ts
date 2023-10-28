@@ -1,7 +1,7 @@
 import { http } from "./httpService";
 
 interface IEmail {
-  email: string;
+  email: string[];
   subject: string;
   message: string;
 }
